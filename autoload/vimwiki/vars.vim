@@ -181,7 +181,7 @@ function! s:read_global_settings_from_user() abort
         \ 'links_header_level': {'type': type(0), 'default': 1, 'min': 1, 'max': 6},
         \ 'listsyms': {'type': type(''), 'default': ' .oOX', 'min_length': 2},
         \ 'listsym_rejected': {'type': type(''), 'default': '-', 'length': 1},
-        \ 'map_prefix': {'type': type(''), 'default': '<Leader>w'},
+        \ 'map_prefix': {'type': type(''), 'default': '<Leader>W'},
         \ 'markdown_header_style': {'type': type(0), 'default': 1, 'min':0, 'max': 2},
         \ 'markdown_link_ext': {'type': type(0), 'default': 0, 'min': 0, 'max': 1},
         \ 'menu': {'type': type(''), 'default': 'Vimwiki'},
