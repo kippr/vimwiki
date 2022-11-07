@@ -31,7 +31,12 @@ function! vimwiki#path#normalize(path) abort
     endif
     let path = result
   endwhile
-  return result
+  " logseq uses namespaces in a single flat directory.. so the link foo/bar resolves to
+  " foo___bar.md
+  " the regex below replaces all '/'s with '___' after 'wiki/' is found.. no idea how but got it
+  " from https://unix.stackexchange.com/a/91472
+  let logseq_version = substitute(result, '\(wiki/.*\)\@<=/', '___', 'g')
+  return logseq_version
 endfunction
 
 
